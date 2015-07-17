@@ -10,8 +10,9 @@ gulp.task('default', function() {
         .pipe(uglify('app.min.js', {
             outSourceMap: true
         }))
-        .pipe(gulp.dest('public/'))
-        .pipe(shell([
-            'node app/server.js'
-        ]))
+        .pipe(gulp.dest('public/'));
 });
+
+gulp.task('serve', shell.task([
+    'node app/server.js'
+])); 

@@ -4,7 +4,7 @@
 * Express
 * **React**
 * **Webpack**
-* **6to5**
+* **6to5 (Now Babel)**
 * Node
 
 # JS power?

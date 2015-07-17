@@ -5,7 +5,9 @@ let fooRouter = express();
 let fooRepo = new FooRepo();
 
 fooRouter.get('/', function(req, res) {
-    res.json(fooRepo.findAll());
+    fooRepo.findAll(function(foos) {
+        res.json(foos);
+    });
 });
 
 export default fooRouter;

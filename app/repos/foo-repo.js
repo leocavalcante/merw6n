@@ -1,12 +1,20 @@
 import $ from 'jquery';
 import Foo from './../entities/foo.js';
+import Mongo from '../mongo-proxy';
 
 export default class {
-    findAll() {
-        return [
-            new Foo('baz'),
-            new Foo('bar')
-        ]
+    findAll(callback) {
+        let self = this;
+
+        Mongo.connect(function(err, db) {
+            if (err) return console.log(err);
+
+            db.collection('foos').find({}).toArray(function(err, foos) {
+                if (err) return console.log(err);
+                
+                callback(foos.map(self.fooFromObject));
+            });
+        });
     }
 
     fetchAll(success) {

@@ -1,6 +1,6 @@
 # MEAN? MERW6N! WTF?
 
-* Mongodb (to come)
+* Mongodb
 * Express
 * **React**
 * **Webpack**

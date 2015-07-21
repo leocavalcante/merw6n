@@ -1,10 +1,10 @@
 import React from 'react';
-import FooItem from './foo-list-item.jsx';
+import FooItem from './list_item.jsx';
 
 export default React.createClass({
     render() {
         return (
-            <ul className="app_foo-list">
+            <ul className="foo__list">
                 {this.props.data.map(this.renderItem)}
             </ul>
         )

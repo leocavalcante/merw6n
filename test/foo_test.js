@@ -1,5 +1,5 @@
 import assert from 'assert';
-import Foo from '../app/entities/foo';
+import Foo from '../src/foo/foo';
 
 describe('Foo', function() {
     it('should uppercase bar', function() {

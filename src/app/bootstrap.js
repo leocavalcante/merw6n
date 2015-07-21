@@ -1,5 +1,5 @@
 import express from 'express';
-import fooRouter from './routes/foo-router.js';
+import fooRouter from '../foo/router';
 
 let app = express();
 app.use('/api/foos', fooRouter);

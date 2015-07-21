@@ -1,6 +1,6 @@
 import React from 'react';
-import FooList from './components/foo-list.jsx';
-import FooRepo from './repos/foo-repo.js';
+import FooList from '../foo/components/list.jsx';
+import FooRepo from '../foo/repository';
 
 let fooRepo = new FooRepo();
 

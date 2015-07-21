@@ -1,5 +1,5 @@
 import express from 'express';
-import FooRepo from './../repos/foo-repo.js';
+import FooRepo from './mrepository';
 
 let fooRouter = express();
 let fooRepo = new FooRepo();

@@ -3,8 +3,10 @@ var webpack = require('gulp-webpack');
 var uglify  = require('gulp-uglifyjs');
 var shell   = require('gulp-shell');
 
-gulp.task('default', function() {
-    return gulp.src('app/entry.jsx')
+gulp.task('test', shell.task(['mocha --compilers js:babel/register']));
+
+gulp.task('build', function() {
+    return gulp.src('src/app/entry.jsx')
         .pipe(webpack(require('./webpack.config.js')))
         .pipe(gulp.dest('dist/'))
         .pipe(uglify('app.min.js', {
@@ -13,6 +15,4 @@ gulp.task('default', function() {
         .pipe(gulp.dest('public/'));
 });
 
-gulp.task('serve', shell.task([
-    'node app/server.js'
-])); 
+gulp.task('start', shell.task(['node src/app/server.js']));

@@ -1,7 +1,7 @@
 module.exports = {
-    context: __dirname + '\\app',
+    context: __dirname + '\\src',
     entry: {
-        app: './entry.jsx'
+        app: './app/entry.jsx'
     },
     output: {
         path: __dirname + '/dist',
@@ -11,7 +11,7 @@ module.exports = {
         loaders: [
             {test: /\.jsx$/, loader: 'jsx-loader'},
             {test: /\.jsx$/, loader: 'babel-loader'},
-            {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+            {test: /\.js$/,  loader: 'babel-loader', exclude: /node_modules/}
         ]
     }
 };
